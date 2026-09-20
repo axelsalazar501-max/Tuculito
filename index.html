@@ -1,0 +1,38 @@
+<body style="background-color: red; text-align: center;">
+<h1 style="color: Pink; font-size: 120px;">SKYLINER</h1>
+<p id="mensaje">🖕Esta es mi primera página web🖕</p>
+<img src="foto.jpg" width="300" style="border-radius: 20px; border: 5px solid white; margin-top: 30px;">
+<button id="miBoton" onclick="cambiarMensaje()"style="background-color: Pink; color: black; font-size: 20px; padding: 10px 20px; border-radius: 10px; transition: 0.3s;">
+🖕Tomalo🖕
+</button>
+
+<script>
+document.getElementById("miBoton").onmouseover = function() {
+    this.style.backgroundColor = "White";
+    this.style.transform = "scale(1.2)";
+};
+
+document.getElementById("miBoton").onmouseout = function() {
+    this.style.backgroundColor = "Pink";
+    this.style.transform = "scale(1)";
+};
+
+let contador = 0;
+
+function cambiarMensaje() {
+    contador = contador + 1;
+
+    if (contador == 1) {
+        document.getElementById("mensaje").innerHTML = "🚀 SKYLINER ACTIVADO 🚀";
+    }
+
+    if (contador == 2) {
+        document.getElementById("mensaje").innerHTML = "😎 ¡SIGUE APRENDIENDO!";
+    }
+
+    if (contador == 3) {
+        document.getElementById("mensaje").innerHTML = "🔥 ¡ERES UN PROGRAMADOR!";
+        contador = 0;
+    }
+}
+</script>
